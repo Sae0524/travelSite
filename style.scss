@@ -1,0 +1,89 @@
+
+@import "colors", "darkmode", "header", "navber";
+
+body {
+  font-size: 10px;
+  text-align: center;
+}
+  
+.main {
+  width: 800px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+  "header header" 70px
+  "nav    nav   " 50px
+  "left   right " 1fr
+  "footer footer" 150px
+  / 1.5fr 1fr ;
+  gap: 3px;
+}
+
+header {
+  background-color: black;
+  grid-area: header;
+  color: aliceblue;
+  font-size: 2.5rem;
+  font-family: monospace;
+}
+
+section {
+  // background-color: rgba(255,255,255,0.5);
+  grid-area: left;
+  padding: 10% 10%;
+  p {
+    text-align: left;
+  }
+}
+
+h3 {
+  margin-top: 10%;
+  margin-bottom: 8%;
+}
+
+aside {
+  // background-color: rgba(255,255,255,0.5);
+  grid-area: right;
+  .logo {
+    display: flex;
+    justify-content: space-evenly;
+    img {
+      width: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+  .asidecontents img {
+    width: 8rem;
+    width: 8rem;
+  }
+}
+
+footer {
+  // background-color: rgba(255,255,255,0.5);
+  grid-area: footer;
+  padding: 0 15%;
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    font-size: 8px;
+    background-color: cadetblue;
+    grid-template:
+    "header" 70px
+    "nav   " 50px
+    "left  " 
+    "right "
+    "footer" 150px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url(https://www.theroadtripexpert.com/wp-content/uploads/2020/05/Canada-road-trip.jpg.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
